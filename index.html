@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="parent">
+    <div id="form">
+      <input id="name" placeholder="название">
+      <input id="price" placeholder="цена">
+      <input id="amount" placeholder="количество">
+      <input id="add" type="button" value="додати">
+    </div>
+    
+    <h2>Таблиця продуктів:</h2>
+    <table id="table">
+      <tr>
+        <th>назва</th>
+        <th>ціна</th>
+        <th>кіл-сть</th>
+        <th>сума</th>
+        <th>видалить</th>
+      </tr>
+    </table>
+    <div id="result">
+      загальнаа сума: <span id="total">0</span>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
