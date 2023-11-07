@@ -46,7 +46,26 @@ add.addEventListener('click', function() {
   
   table.appendChild(tr);
   recountTotal();
+
+  const cellsToEdit = [tr.querySelector('.name'), tr.querySelector('.price'), tr.querySelector('.amount')];
+
+  cellsToEdit.forEach((cell) => {
+    cell.addEventListener('dblclick', function() {
+      const input = document.createElement('input');
+      input.value = this.textContent;
+      this.textContent = '';
+      this.appendChild(input);
+
+      input.addEventListener('blur', function() {
+        this.parentElement.textContent = this.value;
+        updateCostAndTotal();
+      });
+
+      input.focus();
+    });
+  });
 });
+
 
 
 
